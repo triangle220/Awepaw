@@ -219,35 +219,34 @@ nav {
     /* Светлый круглый переключатель при тёмной теме */
 }
 
-.video-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
 .video-container {
+    background-color: rgb(29, 29, 29);
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    align-items: center;
+    height: 200px;
 }
 
 .video-background {
-    background-color: rgb(29, 29, 29); /* Цвет фона */
-    padding: 10px; /* Отступы вокруг видео */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.video-container video {
-    max-width: 50%; /* Максимальная ширина видео */
-    display: block;
-    margin: 0 auto; /* Центрирование видео по горизонтали */
+.btn {
+    padding: 10px 20px;
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-
-.video-container video::-webkit-media-controls-fullscreen-button {
-    display: none; /* Скрываем стандартную кнопку развертывания на полный экран */
-}
-
-.video-container video:-webkit-full-screen {
-    max-width: none; /* При развертывании на полный экран отключаем ограничение ширины */
+.btn:hover {
+    background-color: #333;
 }
 
 
@@ -273,3 +272,4 @@ nav {
         margin: 10px 0;
     }
 }
+
