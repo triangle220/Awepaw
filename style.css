@@ -1,0 +1,275 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+nav {
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu>li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu>li.submenu {
+    position: relative;
+}
+
+.menu>li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu>li a:hover {
+    background-color: #bdbdbd;
+    color: rgba(0, 0, 0, 0.8);
+    /* Затемнение текста при наведении */
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(41, 41, 41);
+    text-align: left;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeInDown 0.5s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.submenu-content li {
+    display: block;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.half-image {
+    width: 50%;
+    /* Устанавливаем ширину половины доступной ширины */
+    max-width: 100%;
+    /* Максимальная ширина изображения по размерам контейнера */
+}
+
+.half-image img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top; /* Устанавливаем вертикальное выравнивание вверх */
+}
+
+
+.half-text {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: white;
+    background-color: rgb(29, 29, 29); /* Фон текста */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.half-text p {
+    margin: 0; /* Убираем внешние отступы у абзацев */
+}
+
+.dark-mode {
+    background-color: rgb(29, 29, 29);
+    color: white;
+    /* Белый текст */
+}
+
+.dark-mode nav {
+    background-color: rgb(59, 59, 59);
+}
+
+.dark-mode .half-text {
+    color: white;
+}
+
+#dark-mode-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#dark-mode-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#dark-mode-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.switch-container {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    /* половина высоты */
+    position: relative;
+    overflow: hidden;
+    /* скрываем все, что выходит за рамки .switch-container */
+}
+
+nav {
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+#dark-mode-btn {
+    margin-left: auto;
+}
+
+.dark-mode-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.switch-container {
+    width: 40px;
+    height: 20px;
+    background-color: #a6a4a4;
+    border-radius: 10px;
+    /* половина высоты */
+    position: relative;
+    overflow: hidden;
+    /* скрываем все, что выходит за рамки .switch-container */
+}
+
+.switch {
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    /* Тёмный круглый переключатель */
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    /* Отступ сверху */
+    left: 2px;
+    /* Отступ слева */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.dark-mode .switch {
+    transform: translateX(20px);
+    background-color: #fdfdfd;
+    /* Светлый круглый переключатель при тёмной теме */
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.video-background {
+    background-color: rgb(29, 29, 29); /* Цвет фона */
+    padding: 10px; /* Отступы вокруг видео */
+}
+
+.video-container video {
+    max-width: 50%; /* Максимальная ширина видео */
+    display: block;
+    margin: 0 auto; /* Центрирование видео по горизонтали */
+}
+
+
+.video-container video::-webkit-media-controls-fullscreen-button {
+    display: none; /* Скрываем стандартную кнопку развертывания на полный экран */
+}
+
+.video-container video:-webkit-full-screen {
+    max-width: none; /* При развертывании на полный экран отключаем ограничение ширины */
+}
+
+
+/* Media Queries for Responsive Layout */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .half-image,
+    .half-text {
+        width: 100%;
+    }
+    .half-image:nth-child(2),
+    .half-text:nth-child(3) {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
