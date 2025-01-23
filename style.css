@@ -1,140 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
+/* General styles */
 body {
     background-color: #1e1e1e;
     color: #e5e5e5;
     line-height: 1.6;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll issues */
 }
 
-nav {
-    background-color: #282828;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu > li {
-    margin: 0 15px;
-    position: relative;
-}
-
-.menu > li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 8px 15px;
-    transition: background-color 0.3s ease;
-}
-
-.menu > li a:hover {
-    background-color: #444;
-    border-radius: 5px;
-}
-
-.submenu-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    margin-top: 10px;
-    padding: 10px 0;
-    border-radius: 5px;
-    list-style: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.submenu-content li {
-    text-align: center;
-}
-
-.submenu-content li a {
-    padding: 10px 20px;
-    display: block;
-}
-
-.submenu:hover .submenu-content {
-    display: block;
-}
-
+/* Header */
 header {
     text-align: center;
     padding: 50px 20px;
     background-color: #111;
     color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-
-.half-image, .half-text {
-    flex: 1 1 calc(50% - 20px);
-    text-align: center;
-    background-color: #222;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.half-image img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.half-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #ff9800;
-}
-
-.call-to-action {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.call-to-action .btn {
-    padding: 10px 20px;
-    background-color: #ff9800;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.call-to-action .btn:hover {
-    background-color: #e68a00;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #111;
-    color: #aaa;
-    font-size: 0.9rem;
-}
+    box-shad
