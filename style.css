@@ -1,76 +1,67 @@
-
 * {
-    padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: color 0.5s, background-color 0.5s;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #e5e5e5;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 nav {
-    background-color: rgb(29, 29, 29);
-    width: 100%;
-    padding: 0;
-    text-align: center;
-    transition: background-color 0.5s;
+    background-color: #282828;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu>li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.menu>li.submenu {
+.menu > li {
+    margin: 0 15px;
     position: relative;
 }
 
-.menu>li a {
+.menu > li a {
     text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s;
+    color: #fff;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
 }
 
-.menu>li a:hover {
-    background-color: #bdbdbd;
-    color: rgba(0, 0, 0, 0.8);
-    /* Затемнение текста при наведении */
+.menu > li a:hover {
+    background-color: #444;
+    border-radius: 5px;
 }
 
 .submenu-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(41, 41, 41);
-    text-align: left;
-    padding: 0;
-    border: 1px solid #ccc;
-    border-top: none;
-    animation: fadeInDown 0.5s ease forwards;
-    animation-delay: 0.3s;
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background-color: #333;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 5px;
+    list-style: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .submenu-content li {
+    text-align: center;
+}
+
+.submenu-content li a {
+    padding: 10px 20px;
     display: block;
 }
 
@@ -78,198 +69,72 @@ nav {
     display: block;
 }
 
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
 
-.half-image {
-    width: 50%;
-    /* Устанавливаем ширину половины доступной ширины */
-    max-width: 100%;
-    /* Максимальная ширина изображения по размерам контейнера */
+.half-image, .half-text {
+    flex: 1 1 calc(50% - 20px);
+    text-align: center;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .half-image img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: top; /* Устанавливаем вертикальное выравнивание вверх */
-}
-
-
-.half-text {
-    width: 50%;
-    box-sizing: border-box;
-    padding: 20px;
-    color: white;
-    background-color: rgb(29, 29, 29); /* Фон текста */
-    text-align: center; /* Выравнивание текста по центру */
-}
-
-.half-text p {
-    margin: 0; /* Убираем внешние отступы у абзацев */
-}
-
-.dark-mode {
-    background-color: rgb(29, 29, 29);
-    color: white;
-    /* Белый текст */
-}
-
-.dark-mode nav {
-    background-color: rgb(59, 59, 59);
-}
-
-.dark-mode .half-text {
-    color: white;
-}
-
-#dark-mode-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-#dark-mode-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-#dark-mode-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.switch-container {
-    width: 40px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 10px;
-    /* половина высоты */
-    position: relative;
-    overflow: hidden;
-    /* скрываем все, что выходит за рамки .switch-container */
-}
-
-nav {
-    background-color: rgb(29, 29, 29);
     width: 100%;
-    padding: 0;
+    border-radius: 8px;
+}
+
+.half-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+
+.call-to-action {
     text-align: center;
-    position: relative;
+    margin: 30px 0;
 }
 
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu li {
-    margin-right: 20px;
-}
-
-#dark-mode-btn {
-    margin-left: auto;
-}
-
-.dark-mode-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.switch-container {
-    width: 40px;
-    height: 20px;
-    background-color: #a6a4a4;
-    border-radius: 10px;
-    /* половина высоты */
-    position: relative;
-    overflow: hidden;
-    /* скрываем все, что выходит за рамки .switch-container */
-}
-
-.switch {
-    width: 16px;
-    height: 16px;
-    background-color: #333;
-    /* Тёмный круглый переключатель */
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    /* Отступ сверху */
-    left: 2px;
-    /* Отступ слева */
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.dark-mode .switch {
-    transform: translateX(20px);
-    background-color: #fdfdfd;
-    /* Светлый круглый переключатель при тёмной теме */
-}
-
-.video-container {
-    background-color: rgb(29, 29, 29);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-}
-
-.video-background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn {
+.call-to-action .btn {
     padding: 10px 20px;
-    background-color: rgb(29, 29, 29);
-    color: #fff;
+    background-color: #ff9800;
+    color: #000;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #333;
+.call-to-action .btn:hover {
+    background-color: #e68a00;
 }
 
-
-/* Media Queries for Responsive Layout */
-
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .half-image,
-    .half-text {
-        width: 100%;
-    }
-    .half-image:nth-child(2),
-    .half-text:nth-child(3) {
-        order: -1;
-    }
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    color: #aaa;
+    font-size: 0.9rem;
 }
-
-@media screen and (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
-
